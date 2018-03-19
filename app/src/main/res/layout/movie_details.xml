@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.android.popularmovies.MovieDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/imgview_poster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/release_date"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Release Date"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/txtview_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/rate"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/txtview_vote_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@android:color/holo_blue_light"
+                    android:src="@drawable/ic_favorite_border_white_24dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtview_original_title"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="Blade Runner 2049" />
+
+        <TextView
+            android:id="@+id/txtview_overview"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp"
+            tools:text="this is an overview " />
+
+        <TextView
+            android:id="@+id/trailersHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Trailers:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trailersList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/trailers_list_content"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/reviewsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Reviews:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reviewsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/reviews_list_content"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.popularmovies.MainActivity">
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/sort"
+        android:title="Sort by"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/top_rated"
+                android:title="Sort by top rated movies" />
+            <item
+                android:id="@+id/most_popular"
+                android:title="Sort by most popular movies" />
+            <item
+                android:id="@+id/fav"
+                android:title="Show my favourites" />
+        </menu>
+
+    </item>
+
+</menu>
