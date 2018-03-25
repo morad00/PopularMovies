@@ -18,7 +18,7 @@ The app uses [IMDB Movie API] (https://www.themoviedb.org/documentation/api) to 
 
 
 # Screenshots
-![](Screenshots/movies.png "Description goes here")
+![](Screenshots/movies.png)
 ![](Screenshots/movie_details.png)
 ![](Screenshots/movie_details_2.png)
 
